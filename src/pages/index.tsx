@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <>
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Tour De World</title>
         <meta name="TourDeWorld" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        Tour De World
+      </Head> */}
+      <main className='min-h-screen flex justify-center items-center'>
+        <h1 className='text-black font-bold text-6xl'>Tour De World</h1>
       </main>
     </Layout>
       
