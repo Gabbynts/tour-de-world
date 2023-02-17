@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Layout from '@/components/layout/Layout'
 import Hero from '@/sections/Hero'
 import About from '@/sections/About'
+import Service from '@/sections/Service'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +19,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head> 
-      <main className='overflow-x-hidden  w-full bg-[#DFAE93] z-10'>
+      <main className='w-full bg-[#DFAE93] z-10'>
         <Hero />
         <About />
+        <Service />
       </main>
     </Layout>
       
