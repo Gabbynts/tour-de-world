@@ -3,7 +3,7 @@ import React from "react";
 
 function Hero () {
     return (
-        <section className='flex flex-col md:flex-row gap-5 items-center pb-3 md:pt-[50px] pt-28'>
+        <section className='md:min-h-screen flex flex-col md:flex-row gap-5 items-center pb-3 md:pt-[50px] pt-28'>
           <div className='absolute gradient-02 z-0 md:-left-[100px] -left-[300px] -top-6'/>
             <div className='absolute -right-0 top-20'>
               <Image
@@ -15,7 +15,6 @@ function Hero () {
             </div>
 
             <div className='flex justify-center sm:top-4 transition duration-500 hover:scale-105'>
-
               <Image 
               src='/images/earth.png'
               alt='earth'
