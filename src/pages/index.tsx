@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Layout from '@/components/layout/Layout'
+import Hero from '@/sections/Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,14 +11,14 @@ export default function Home() {
   return (
     <>
     <Layout>
-      {/* <Head>
+      <Head>
         <title>Tour De World</title>
         <meta name="TourDeWorld" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head> */}
-      <main className='min-h-screen flex justify-center items-center'>
-        <h1 className='text-black font-bold text-6xl'>Tour De World</h1>
+      </Head> 
+      <main className='relative min-h-screen flex justify-center items-center bg-[#DFAE93] z-10'>
+        <Hero />
       </main>
     </Layout>
       
