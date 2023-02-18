@@ -4,9 +4,17 @@ import { stepsText } from '@/constant/photoWorlds';
 import { fadeIn, staggerContainer } from '@/utils/motion';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function About() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section id='about'>
       <motion.div
@@ -31,7 +39,10 @@ function About() {
           </div>
         </motion.div>
 
-        <div className='relative pt-20 flex md:w-1/2 '>
+        <div 
+          className='relative pt-20 flex md:w-1/2 '
+          data-aos="fade-up"
+        >
           <Image
             src='/images/character-1.png'
             alt='character'
