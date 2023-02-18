@@ -4,9 +4,9 @@ import {FaTimes} from 'react-icons/fa'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
 const navLinks = [
-    {section:'/', label: 'Home'},
-    {section:'/', label: 'About'},
-    {section:'/', label: 'Service'},
+    {section:'#hero', label: 'Home'},
+    {section:'#about', label: 'About'},
+    {section:'#service', label: 'Service'},
     {section:'/', label: 'Contact'}
 ]
 

@@ -7,7 +7,7 @@ import Text from '@/components/Text';
 
 function Hero() {
   return (
-    <section>
+    <section id='hero'>
       <motion.div
         variants={staggerContainer}
         initial='hidden'
