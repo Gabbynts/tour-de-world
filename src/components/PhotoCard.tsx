@@ -34,14 +34,14 @@ function PhotoCard({ id, imgUrl, title, index, active, handleClick }: Props) {
 
       {active !== id ? (
         <div className='bg-black/50 absolute w-full h-full rounded-[24px] transition hover:bg-black/20 cursor-pointer '>
-            <div className=' lg:-rotate-90 pr-10 flex items-center justify-center'>
+            <div className=' lg:-rotate-90 md:pr-20 flex items-center justify-center'>
               <h2 className='text-[20px] mt-5 ml-5 pr-5 font-semibold text-white '>{title}</h2>
             </div>
         </div>
       ) : (
-        <div className='absolute bottom-0 bg-black/50 py-5 w-full h-1/3 lg:h-1/6 flex items-center'>
-            <div className='pl-9 flex justify-between gap-x-[64px] sm:gap-x-[200px] transition-shadow'>
-                <div className='flex bg-black/70 hover:bg-white/40 sm:w-full sm:p-2 rounded-2xl justify-center items-center  cursor-pointer'>
+        <div className='absolute bottom-0 bg-black/50 py-5 w-full h-1/3 lg:h-1/6 flex justify-center items-center'>
+            <div className='flex justify-center items-center transition-shadow'>
+                {/* <div className='flex bg-black/70 hover:bg-white/40 sm:w-full sm:p-2 rounded-2xl justify-center items-center  cursor-pointer'>
                     <Image
                         src='/headset.svg'
                         alt='Headset'
@@ -49,8 +49,8 @@ function PhotoCard({ id, imgUrl, title, index, active, handleClick }: Props) {
                         height={20}
                         className='w-1/2 sm:w-full'
                     />
-                </div>
-                <h2 className='w-1/2 text-[24px] sm:text-[40px] font-light text-white'>{title}</h2>
+                </div> */}
+                <h2 className='text-[24px] sm:text-[40px] font-light text-white'>{title}</h2>
             </div>
         </div>
       )}

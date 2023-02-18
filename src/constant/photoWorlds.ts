@@ -25,3 +25,9 @@ export const photoWorlds = [
         title: 'Everest'
     }
 ];
+
+export const stepsText = [
+    'Find a world',
+    'Enter the world',
+    'Have Fun!'
+]

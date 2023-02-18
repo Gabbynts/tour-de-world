@@ -17,7 +17,7 @@ function Service() {
         viewport={{ once: false, amount: 0.25 }}
       >
         <div className='flex justify-center w-full md:justify-start pr-5 -mt-5 py-3 pl-3'>
-            <Text sizeVariant='c' colorVariant='dark' className='font-serif z-10 hover:drop-shadow-2xl'>
+            <Text sizeVariant='c' colorVariant='secondary' className='z-10 hover:drop-shadow-2xl'>
             Choose Your World
             </Text>
         </div>
