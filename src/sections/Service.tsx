@@ -9,12 +9,13 @@ function Service() {
   const [active, setActive] = useState('1');
 
   return (
-    <section id='service' className='pt-7 min-h-screen mx-auto flex flex-col justify-center'>
+    <section id='service' className='pt-7 min-h-screen mx-auto flex flex-col gap-y-5 justify-center'>
         <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
+
       >
         <div className='flex justify-center w-full md:justify-start pr-5 -mt-5 py-3 pl-3'>
             <Text sizeVariant='c' colorVariant='secondary' className='z-10 hover:drop-shadow-2xl'>

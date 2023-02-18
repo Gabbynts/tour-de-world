@@ -22,14 +22,14 @@ function About() {
         initial='hidden'
         whileInView='show'
         viewport={{ once: false, amount: 0.25 }}
-        className='flex flex-col md:flex-row bg-gradient-to-b from-[#D9D9D9] to-[#c59a82] rounded-tl-[700px] z-10 items-center w-full'
+        className='flex flex-col md:flex-row gap-y-5 bg-gradient-to-b from-[#D9D9D9] to-[#c59a82] rounded-tl-[700px] z-10 items-center w-full'
       >
         <div className='hidden sm:block gradient-02 z-0 overflow-hidden right-0 -bottom-[500px]' />
         <motion.div
           variants={fadeIn('left', 'tween', 0.2, 1)}
-          className='w-1/2 pl-48 text-start hidden md:block'
+          className='w-1/2 md:pl-48 text-start order-last md:order-first md:block '
         >
-          <Text colorVariant='secondary' className='font-light'>
+          <Text colorVariant='secondary' className='font-light mb-5'>
             Get Started
           </Text>
           <div className='flex flex-col gap-y-3'>
@@ -40,7 +40,7 @@ function About() {
         </motion.div>
 
         <div 
-          className='relative pt-20 flex md:w-1/2 '
+          className='relative pt-20 flex md:w-1/2 mb-5'
           data-aos="fade-up"
         >
           <Image
