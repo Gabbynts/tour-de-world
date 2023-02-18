@@ -24,7 +24,7 @@ const Text: React.FC<TextProps> = ({
         [
         sizeVariant === 'h' && ['text-[50px] md:text-[80px] font-semibold md:font-bold'],
         sizeVariant === 'b' && ['text-[15px] md:text-[40px]'],
-        sizeVariant === 'c' && ['font-bold text-[24px] md:text-[50px]'],
+        sizeVariant === 'c' && ['font-extralight text-[24px] md:text-[50px]'],
 
       ],
       [

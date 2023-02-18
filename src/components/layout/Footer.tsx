@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { AiFillGithub, AiOutlineLinkedin, AiOutlineInstagram } from 'react-icons/ai'
+import Text from '../Text';
 
 const footerLinks = [
   {href: 'https://github.com/Gabbynts', icons: <AiFillGithub />},
@@ -26,10 +27,10 @@ function Footer() {
           ))}
         </ul>
       </div>
-      <hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
-      <span className='block text-sm text-gray-500 sm:text-center dark:text-gray-400'>
+      <hr className='my-6 sm:mx-auto border-gray-700 lg:my-8' />
+      <Text colorVariant='dark' className='block !text-sm sm:text-center'>
         Gabriella™. All Rights Reserved.
-      </span>
+      </Text>
     </footer>
   );
 }

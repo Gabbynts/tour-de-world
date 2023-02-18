@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { earth, fadeIn, staggerContainer } from '@/utils/motion';
 import Earth from '@/container/Earth';
+import Text from '@/components/Text';
 
 function Hero() {
-  const [size, setSize] = useState<string>('');
   return (
     <section>
       <motion.div
@@ -31,12 +31,12 @@ function Hero() {
         
         <Earth />
         <div className='flex flex-col relative z-10 md:gap-y-8 -mt-20 sm:py-5 md:full py-28 md:px-7 text-center md:top-20 rounded-3xl md:bg-[#c59a82]/10 md:shadow-[0_15px_15px_15px_rgba(0,0,0,0.3)] transition duration-500 hover:scale-105'>
-          <h1 className='text-[#3b2e27] text-[50px] font-semibold md:font-[700] md:text-[80px] drop-shadow-xl z-10 '>
+          <Text colorVariant='primary' sizeVariant='h' className='drop-shadow-xl z-10'>
             Tour De World
-          </h1>
-          <p className='text-[15px] md:text-[40px] z-10 text-[#815a45]'>
+          </Text>
+          <Text colorVariant='secondary' sizeVariant='b' className='z-10'>
             Experience the World <br /> One Adventure at a Time
-          </p>
+          </Text>
         </div>
       </motion.div>
     </section>

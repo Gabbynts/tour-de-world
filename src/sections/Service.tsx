@@ -1,4 +1,5 @@
 import PhotoCard from '@/components/PhotoCard';
+import Text from '@/components/Text';
 import { photoWorlds } from '@/constant/photoWorlds';
 import { staggerContainer } from '@/utils/motion';
 import { motion } from 'framer-motion';
@@ -16,9 +17,9 @@ function Service() {
         viewport={{ once: false, amount: 0.25 }}
       >
         <div className='flex justify-center w-full md:justify-start pr-5 -mt-5 py-3 pl-3'>
-            <h2 className='text-[#000000] font-bold text-[24px] md:text-[50px] font-serif z-10'>
+            <Text sizeVariant='c' colorVariant='dark' className='font-serif z-10 hover:drop-shadow-2xl'>
             Choose Your World
-            </h2>
+            </Text>
         </div>
         <div className='flex flex-col lg:flex-row gap-x-5 min-h-[70vh] px-5 md:pb-10 pb-3'>
         {photoWorlds.map((photo, index) => (
