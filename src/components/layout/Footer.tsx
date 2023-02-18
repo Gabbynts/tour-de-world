@@ -20,7 +20,7 @@ function Footer() {
         />
         <ul className='flex items-center text-sm sm:mb-0 text-gray-400 lg:gap-x-3 gap-x-1'>
           {footerLinks.map(({href, icons}) => (
-            <li className='hover:text-gray-600'>
+            <li key={`${href}${icons}`} className='hover:text-gray-600'>
               <a href={`${href}`} className=" text-[30px]">{icons}</a>
             </li>
           ))}
