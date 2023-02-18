@@ -17,8 +17,8 @@ function Header() {
       };
 
   return (
-    <header className='fixed flex justify-between bg-white w-full z-20'>
-        <div className='flex items-center'>
+    <header className='fixed flex justify-between bg-white w-full z-30'>
+        <div className='flex items-center mb-1'>
             <Image 
               src='/images/TourdeWorld.png'
               alt='logo'
@@ -28,10 +28,10 @@ function Header() {
             />
         </div>
          <nav className='hidden md:flex items-center'>
-          <ul className='hidden relative md:flex gap-x-11 text-[20px] font-semibold text-[#3b2e27] right-7'>
+          <ul className='hidden relative md:flex gap-x-11 text-[20px] font-semibold right-7'>
             {navLinks.map(({ section, label }) => (
               <li key={`${section}${label}`}>
-                <a href={section} className='hover:text-gray-600'>
+                <a href={section} className=' hover:text-black hover:drop-shadow text-[#DFAE93]'>
                   {label}
                 </a>
               </li>
@@ -49,11 +49,11 @@ function Header() {
         <div
         className={`flex translate-y-[calc(100%-4rem)] md:hidden ${
           isOpen ? 'translate-x-0' : 'translate-x-full opacity-0'
-        } absolute left-0 h-screen w-full flex-col bg-[#DFAE93] pt-[6vh] text-white transition duration-300 bottom-2`}
+        } absolute left-0 min-h-screen w-full flex-col bg-[#DFAE93] transition duration-300 bottom-2`}
       >
         <nav className='relative z-20 flex h-screen w-full flex-col'>
           <ul>
-          <div className='flex justify-center items-center p-5 bg-white'>
+          <div className='flex justify-center items-center pb-5 bg-white'>
             <Image 
               src='/images/TourdeWorld.png'
               alt='logo'
@@ -66,7 +66,7 @@ function Header() {
               <li key={`${section}${label}`} className='py-3 px-7'>
                 <a
                   href={section}
-                  className='flex w-full items-center justify-center font-semibold hover:text-gray-600'
+                  className='flex w-full items-center justify-center font-semibold hover:text-black text-[#3b2e27]'
                 >
                   {label}
                 </a>
