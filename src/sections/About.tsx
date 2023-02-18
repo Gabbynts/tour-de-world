@@ -3,7 +3,7 @@ import React from 'react';
 
 function About() {
   return (
-    <section className='bg-gradient-to-b from-[#D9D9D9] to-[#DFAE93] rounded-tl-[700px] z-10'>
+    <section id='' className='bg-gradient-to-b from-[#D9D9D9] to-[#c59a82] rounded-tl-[700px] z-10'>
       <div className='hidden sm:block gradient-02 z-0 relative overflow-hidden right-0 -bottom-[500px]' />
       <div className='relative pt-20 flex justify-end'>
         <Image
