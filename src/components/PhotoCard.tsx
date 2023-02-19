@@ -7,9 +7,9 @@ interface Props {
   id: string;
   imgUrl: string;
   title: string;
-  index: any;
-  active: any;
-  handleClick: any;
+  index: number;
+  active: string;
+  handleClick: (event: string) => void;
 }
 
 function PhotoCard({ id, imgUrl, title, index, active, handleClick }: Props) {
