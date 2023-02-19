@@ -17,11 +17,11 @@ function Service() {
         viewport={{ once: false, amount: 0.25 }}
       >
         <div className='flex justify-center w-full md:justify-start pr-5 -mt-5 py-3 pl-3'>
-            <Text sizeVariant='c' colorVariant='secondary' className='z-10 hover:drop-shadow-2xl'>
+            <Text sizeVariant='c' colorVariant='secondary' className='z-10 hover:drop-shadow-2xl dark:text-[#E6D2FF]'>
             Choose Your World
             </Text>
         </div>
-        <div className='flex flex-col lg:flex-row gap-x-5 min-h-[70vh] px-5 gapmd:pb-10 pb-3'>
+        <div className='flex flex-col lg:flex-row gap-x-5 min-h-[70vh] px-5 md:pb-10 pb-3'>
         {photoWorlds.map((photo, index) => (
           <PhotoCard
             key={photo.id}

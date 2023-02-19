@@ -11,7 +11,7 @@ const footerLinks = [
 
 function Footer() {
   return (
-    <footer className='p-4 rounded-t-2xl shadow md:px-6 md:py-8 bg-white/75'>
+    <footer className='p-4 rounded-t-2xl shadow md:px-6 md:py-5 dark:bg-[#E6D2FF] bg-white/75'>
       <div className='flex items-center justify-between'>
         <Image
           src='/images/TourdeWorld.png'

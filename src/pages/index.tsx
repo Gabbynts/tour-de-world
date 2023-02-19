@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head> 
-      <main className='w-full bg-[#c59a82] z-10'>
+      <main className='w-full dark:bg-[#1C0737] bg-[#c59a82] z-10'>
         <Hero />
         
         <About />

@@ -22,9 +22,9 @@ const Text: React.FC<TextProps> = ({
   return (
     <p className={clsx(        
         [
-        sizeVariant === 'h' && ['text-[50px] md:text-[80px] font-semibold md:font-bold'],
-        sizeVariant === 'b' && ['text-[15px] md:text-[40px]'],
-        sizeVariant === 'c' && ['font-extralight text-[24px] md:text-[70px]'],
+        sizeVariant === 'h' && ['text-[50px] md:text-[60px] lg:text-[80px] font-semibold md:font-bold'],
+        sizeVariant === 'b' && ['text-[15px] md:text-[25px] lg:text-[40px]'],
+        sizeVariant === 'c' && ['font-extralight text-[24px] md:text-[40px] lg:text-[70px]'],
 
       ],
       [
