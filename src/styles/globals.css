@@ -12,6 +12,15 @@ body{
   width: 550px;
   height: 550px;
 
-  background: #be602c 100%;
+  background: #e05f19 100%;
+  filter: blur(210px);
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+
+  background: #d9c1e6 100%;
   filter: blur(210px);
 }
