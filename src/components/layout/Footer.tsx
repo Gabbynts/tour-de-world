@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiOutlineLinkedin, AiOutlineInstagram } from 'react-icons/ai'
 import Text from '../Text';
@@ -12,13 +13,17 @@ const footerLinks = [
 function Footer() {
   return (
     <footer className='p-4 rounded-t-2xl shadow md:px-6 md:py-5 dark:bg-[#E6D2FF] bg-white/75'>
-      <div className='flex items-center justify-between'>
-        <Image
-          src='/images/TourdeWorld.png'
-          alt='TDW Logo'
-          width={100}
-          height={8}
-        />
+      <div className='flex layout items-center justify-between'>
+        <Link href='/'>
+          <Image
+            src='/images/TourdeWorld.png'
+            alt='TDW Logo'
+            width={100}
+            height={8}
+            className='cursor-pointer'
+          />
+        </Link>
+        
         <ul className='flex items-center text-sm sm:mb-0 text-gray-400 lg:gap-x-3 gap-x-1'>
           {footerLinks.map(({href, icons}) => (
             <li key={`${href}${icons}`} className='hover:text-gray-600'>
@@ -27,8 +32,8 @@ function Footer() {
           ))}
         </ul>
       </div>
-      <hr className='my-6 sm:mx-auto border-gray-700 lg:my-8' />
-      <Text colorVariant='dark' className='block !text-sm sm:text-center'>
+      <hr className='my-6 layout sm:mx-auto border-gray-700 lg:my-8' />
+      <Text colorVariant='dark' className='block layout !text-sm sm:text-center'>
         Gabriella™. All Rights Reserved.
       </Text>
     </footer>

@@ -18,18 +18,18 @@ function About() {
   }, []);
 
   return (
-    <section id='about'>
+    <section id='about' className='bg-gradient-to-b from-[#D9D9D9] dark:from-[#5d4f6e] to-[#c59a82] rounded-tl-[700px]'>
       <motion.div
         variants={staggerContainer}
         initial='hidden'
         whileInView='show'
         viewport={{ once: false, amount: 0.25 }}
-        className='flex flex-col md:flex-row gap-y-5 bg-gradient-to-b from-[#D9D9D9] dark:from-[#5d4f6e] to-[#c59a82] rounded-tl-[700px] z-10 items-center w-full'
+        className='flex flex-col md:flex-row gap-y-5 z-10 items-center justify-between layout'
       >
         <RenderGradientAbout />
         <motion.div
           variants={fadeIn('left', 'tween', 0.2, 1)}
-          className='w-1/2 md:pl-48 text-start order-last md:order-first md:block '
+          className='items-center md:pl-48 text-start order-last md:order-first md:block'
         >
           <Text colorVariant='secondary' className='font-light mb-5 dark:text-[#E6D2FF]'>
             Get Started
