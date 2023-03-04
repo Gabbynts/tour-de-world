@@ -5,43 +5,55 @@ import { TiWorld } from 'react-icons/ti';
 import { GiRoundStar } from 'react-icons/gi';
 import Link from 'next/link';
 import { listPhotos } from '@/constant/listPhotos';
+import { useQuery } from 'react-query';
+import { useState } from 'react';
+import { fetchPhotos } from '@/pages/api/unsplash';
+import PhotoSliderRight from '@/components/photos/PhotoSliderRight';
+import PhotoSliderLeft from '@/components/photos/PhotoSliderLeft';
+
+interface QueryError {
+  message: string;
+  // Add any other properties you expect to use here
+}
 
 export default function Home() {
+
+  const [page, setPage] = useState(1);
+  const { isLoading, isError, data, error } = useQuery(
+    ['indonesia-photos', page],
+    () => fetchPhotos('indonesia', 9, page, 't5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'),
+    { keepPreviousData: true, staleTime: 5000 }
+  );
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (isError) {
+    const queryError = error as QueryError;
+    return <div>Error: {queryError.message}</div>;
+  }
+
+
   return (
     <>
       <Layout>
         <Head>
-          <title>Paris | Tour De World</title>
+          <title>Indonesia | Tour De World</title>
           <meta name='TourDeWorld' content='' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <main className='min-h-screen layout py-24'>
           <div className='flex items-center'>
-            <h1 className='text-[64px]'>Paris</h1>
+            <h1 className='text-[64px]'>Indonesia</h1>
             <div className='w-full pt-9 flex ml-4 flex-col'>
               <hr />
               <p>The unique experiences</p>
             </div>
           </div>
-          <div className='flex flex-col'>
-            <div className='slider top-12'>
-              <div className='slide-track'>
-                {listPhotos.map((photo, id) => (
-                  <div className='slide'>
-                    <Image
-                      key={photo.id}
-                      src={photo.imgUrl}
-                      alt={photo.title}
-                      width={300}
-                      height={100}
-                      className='img rounded-lg border-[#b999e2] border-2'
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <PhotoSliderRight photos={data} />
+          
           <div className='flex items-center gap-5 pt-20'>
             <TiWorld className='text-[35px]' />
             <p>
@@ -49,23 +61,8 @@ export default function Home() {
               experiences.
             </p>
           </div>
-          <div className='slider'>
-            <div className='slide-track2'>
-              {listPhotos.map((photo, id) => (
-                <div className='slide'>
-                  <Image
-                    key={photo.id}
-                    src={photo.imgUrl}
-                    alt={photo.title}
-                    width={300}
-                    height={100}
-                    className='img rounded-lg border-[#b999e2] border-2'
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className='pt-9'>
+         <PhotoSliderLeft photos={data} />
+          <div className='pt-20'>
             <Link
               href='/forms/paris'
               className='flex w-[256px] justify-center items-center gap-x-2 bg-[#6E4C99] px-3 py-2 rounded-[10px] hover:bg-[#583c7e]'

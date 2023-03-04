@@ -161,7 +161,7 @@ export default function Desert() {
                       />
                     </>
                   )}
-                  <div>
+                  {/* <div>
                     <label>
                       <Controller
                         name='checkboxValue'
@@ -177,7 +177,7 @@ export default function Desert() {
                       />
                       Want us to send information?
                     </label>
-                  </div>
+                  </div> */}
 
                   <PhotoInput
                     id='photo'
