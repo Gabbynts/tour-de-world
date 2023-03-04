@@ -14,8 +14,8 @@ export const photoWorlds = [
     {
         id: '3',
         imgUrl: '/images/waterfall.png',
-        link:'worlds/waterfall',
-        title: 'Waterfall'
+        link:'worlds/tumpak-sewu',
+        title: 'Tumpak Sewu'
     },
     {
         id: '4',
