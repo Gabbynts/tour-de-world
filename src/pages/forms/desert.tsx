@@ -20,18 +20,20 @@ export default function Desert() {
     mode: 'onTouched',
   });
 
-  const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showFailedModal, setShowFailedModal] = useState(false);
 
   const {
-    control,
+    // control,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      checkboxValue: false,
-    },
-  });
+  } = useForm(
+    // {
+    // defaultValues: {
+    //   checkboxValue: false,
+    // },
+    // }
+  );
   const { handleSubmit } = methods;
 
   const onSubmit = (data: unknown) => {
@@ -131,8 +133,8 @@ export default function Desert() {
                       Checkbox Label
                     </label>
                   </div> */}
-                  {isChecked && (
-                    <>
+                  {/* {isChecked && (
+                    <> */}
                       <Input
                         id='email'
                         label='Email'
@@ -159,8 +161,8 @@ export default function Desert() {
                           },
                         }}
                       />
-                    </>
-                  )}
+                    {/* </>
+                  )} */}
                   {/* <div>
                     <label>
                       <Controller

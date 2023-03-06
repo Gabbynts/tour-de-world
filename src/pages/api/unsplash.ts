@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface UnsplashPhoto {
+export interface UnsplashPhoto {
     id: string;
     urls: {
       regular: string;
@@ -11,7 +11,7 @@ interface UnsplashPhoto {
     date: string;
   }
   
-  export const fetchPhotos = async (query: string, perPage: number, page: number, accessKey: string) => {
+  export const getPhotos = async (query: string, perPage: number, page: number, accessKey: string) => {
     const response = await fetch(
       `https://api.unsplash.com/search/photos?query=${query}&per_page=${perPage}&page=${page}`,
       {
@@ -26,9 +26,8 @@ interface UnsplashPhoto {
     const data = await response.json();
     return data.results as UnsplashPhoto[];
   };
-  
 
-  export const fetchPhoto = async (id: any, accessKey: string) => {
+  export const getDetailsPhoto = async (id: any, accessKey: string) => {
     const res = await axios.get(`https://api.unsplash.com/photos/${id}`, {
       headers: {
         Authorization: `Client-ID ${accessKey}`,
@@ -51,4 +50,3 @@ interface UnsplashPhoto {
     };
     return data;
   };
-//   https://api.unsplash.com/search/photos?query=paris-photos&per_page=&page=paget5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'

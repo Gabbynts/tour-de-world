@@ -4,10 +4,9 @@ import Image from 'next/image';
 import { useInfiniteQuery } from 'react-query';
 import { getPhotos } from '@/pages/api/unsplash';
 import React from 'react';
-import {BsArrowDownCircle} from 'react-icons/bs'
+import { BsArrowDownCircle } from 'react-icons/bs';
 
 export default function Home() {
-
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery(
       'nature',
@@ -21,9 +20,9 @@ export default function Home() {
       {
         getNextPageParam: (lastPage, allPages) =>
           lastPage.length === 0 ? undefined : allPages.length + 1,
+        cacheTime: 60 * 60 * 1000,
       }
     );
-
 
   if (status == 'loading') {
     return (
@@ -47,6 +46,15 @@ export default function Home() {
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <main className='min-h-screen layout py-24'>
+          {/* <div className='-mt-5 w-auto'>
+            <Image
+              src='/images/background-pg2.jpg'
+              alt='bg-pagination'
+              height={150}
+              width={200}
+              className='w-full absolute -z-10'
+            />
+          </div> */}
           <div className='flex flex-col items-center gap-3'>
             <h1 className='text-[80px] font-thin'>OVERVIEW</h1>
             <div className='flex flex-wrap gap-5 justify-center'>
@@ -60,7 +68,7 @@ export default function Home() {
                         alt={photo.alt_description}
                         width={300}
                         height={100}
-                        className='img w-[380px] h-[450px] border-2'
+                        className='img w-[380px] h-[450px] border-2 border-[#3795BD]'
                       />
                     </div>
                   ))}
@@ -71,9 +79,9 @@ export default function Home() {
               <button
                 onClick={() => fetchNextPage()}
                 disabled={!hasNextPage || isFetchingNextPage}
-                className='text-white transition duration-200 animate-pulse hover:animate-none'
+                className='transition duration-200'
               >
-                <BsArrowDownCircle className='animate-bounce text-[50px]'/>
+                <BsArrowDownCircle className='animate-bounce text-[50px]' />
               </button>
             </div>
           </div>
