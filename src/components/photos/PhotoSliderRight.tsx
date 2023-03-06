@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-interface SliderProps {
+interface Props {
     photos: Photo[] | undefined;
   }
   
@@ -14,20 +14,20 @@ interface SliderProps {
     alt_description: string;
   }
 
-function PhotoSliderRight({ photos }: SliderProps) {
+function PhotoSliderRight({ photos }: Props) {
   return (
     <div className='flex flex-col'>
     <div className='slider top-12'>
       <div className='slide-track'>
         {photos?.map((photo) => (
-          <Link href={`paris/${photo.id}`} className='slide'>
+          <Link href={`desert/${photo.id}`} className='slide'>
             <Image
             key={photo.id}
             src={photo.urls.regular}
             alt={photo.alt_description}
             width={300}
             height={100}
-            className='img w-[350px] h-[400px] rounded-lg border-[#b999e2] border-2'
+            className='img w-[350px] h-[400px] rounded-lg border-white border-2'
           />
           </Link>
         )) ?? []}

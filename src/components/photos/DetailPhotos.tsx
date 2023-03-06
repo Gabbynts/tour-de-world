@@ -13,19 +13,19 @@ function DetailPhotos({
   return (
     <>
       <div className='relative flex items-center justify-center'>
-        <h1
-          className='whitespace-normal absolute hover:-z-10 p-5 uppercase text-[120px] font-medium text-white
-                            transition duration-500'
+        <button
+          className='whitespace-none hover:text-white/0 absolute p-5 uppercase text-[110px] font-medium text-white
+                            transition duration-500 text-center '
         >
           {name}
-        </h1>
+        </button>
         <div>
           <img
             src={image}
             alt={desc}
-            className='w-[700px] rounded-t-full h-[900px]'
+            className='w-[700px] rounded-t-full h-[850px]'
           />
-          <div className='flex flex-col items-center bg-white py-2'>
+          <div className='flex flex-col items-center bg-[#F7EFE5] py-2'>
             <p className='text-lg text-black font-medium leading-relaxed word-spacing-2 '>
               {desc}
             </p>

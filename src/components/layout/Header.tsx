@@ -20,14 +20,14 @@ function Header() {
   return (
     <header className='fixed dark:bg-[#E6D2FF] bg-white w-full z-30'>
       <div className='layout flex justify-between'>
-        <div className='flex items-center mb-1'>
+        <div className='flex items-center'>
           <Link href='/'>
             <Image
               src='/images/TourdeWorld.png'
               alt='logo'
               width={177}
               height={70}
-              className='relative left-3 mt-3'
+              className='relative left-3 py-2'
             />
           </Link>
         </div>

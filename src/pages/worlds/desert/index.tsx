@@ -1,15 +1,14 @@
 import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
-import Image from 'next/image';
 import { TiWorld } from 'react-icons/ti';
 import { GiRoundStar } from 'react-icons/gi';
 import Link from 'next/link';
-import { listPhotos } from '@/constant/listPhotos';
 import { useQuery } from 'react-query';
 import { useState } from 'react';
-import { fetchPhotos } from '@/pages/api/unsplash';
+import { getPhotos } from '@/pages/api/unsplash';
 import PhotoSliderRight from '@/components/photos/PhotoSliderRight';
 import PhotoSliderLeft from '@/components/photos/PhotoSliderLeft';
+import ErrorPage from '@/components/photos/Error';
 
 interface QueryError {
   message: string;
@@ -17,23 +16,31 @@ interface QueryError {
 }
 
 export default function Home() {
-
   const [page, setPage] = useState(1);
   const { isLoading, isError, data, error } = useQuery(
     ['desert-photos', page],
-    () => fetchPhotos('desert', 9, page, 't5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'),
+    () =>
+      getPhotos(
+        'desert',
+        9,
+        page,
+        't5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'
+      ),
     { keepPreviousData: true, staleTime: 5000 }
   );
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className='page_loader'>
+        <div className='loader'></div>
+      </div>
+    );
   }
 
   if (isError) {
     const queryError = error as QueryError;
-    return <div>Error: {queryError.message}</div>;
+    return <ErrorPage message={queryError.message}/>;
   }
-
 
   return (
     <>
@@ -53,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           <PhotoSliderRight photos={data} />
-          
+
           <div className='flex items-center gap-5 pt-20'>
             <TiWorld className='text-[35px]' />
             <p>
@@ -61,10 +68,10 @@ export default function Home() {
               experiences.
             </p>
           </div>
-         <PhotoSliderLeft photos={data} />
+          <PhotoSliderLeft photos={data} />
           <div className='pt-20'>
             <Link
-              href='/forms/paris'
+              href='/forms/desert'
               className='flex w-[256px] justify-center items-center gap-x-2 bg-[#6E4C99] px-3 py-2 rounded-[10px] hover:bg-[#583c7e]'
             >
               Share Your Experiences <GiRoundStar />

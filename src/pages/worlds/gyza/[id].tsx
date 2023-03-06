@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
-import { fetchPhoto } from '@/pages/api/unsplash';
+import { getDetailsPhoto } from '@/pages/api/unsplash';
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
 import DetailPhotos from '@/components/photos/DetailPhotos';
@@ -17,14 +17,18 @@ const PhotoPage = () => {
     : router.query.id;
   const { isLoading, isError, data, error } = useQuery(
     ['photo', id],
-    () => fetchPhoto(id, 't5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'),
+    () => getDetailsPhoto(id, 't5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'),
     {
       enabled: !!id,
     }
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className='page_loader'>
+        <div className='loader'></div>
+      </div>
+    );
   }
 
   if (isError) {
@@ -43,10 +47,11 @@ const PhotoPage = () => {
         </Head>
         <main className='min-h-screen layout py-24'>
           <DetailPhotos
-           name={data?.user}
-           image={data?.urls.regular}
-           desc={data?.alt_description}
-           date={data?.date}/>
+            name={data?.user}
+            image={data?.urls.regular}
+            desc={data?.alt_description}
+            date={data?.date}
+          />
         </main>
       </Layout>
     </>

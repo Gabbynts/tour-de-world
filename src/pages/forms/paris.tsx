@@ -9,7 +9,6 @@ import Calendar from '@/components/forms/Calendar';
 import PhotoInput from '@/components/forms/Photos';
 import { FormProvider, useForm } from 'react-hook-form';
 import SuccessModal from '@/components/modal/SuccessModal';
-import FailedModal from '@/components/modal/FailedModal';
 
 export default function Desert() {
   const methods = useForm({
