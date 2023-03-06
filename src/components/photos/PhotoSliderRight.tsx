@@ -20,9 +20,8 @@ function PhotoSliderRight({ photos }: Props) {
     <div className='slider top-12'>
       <div className='slide-track'>
         {photos?.map((photo) => (
-          <Link href={`desert/${photo.id}`} className='slide'>
+          <Link href={`desert/${photo.id}`} className='slide' key={photo.id}>
             <Image
-            key={photo.id}
             src={photo.urls.regular}
             alt={photo.alt_description}
             width={300}
