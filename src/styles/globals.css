@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather&family=Montserrat&family=Poppins:wght@400;500;600&family=Sacramento&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,13 +8,13 @@
 @layer base {
   body {
     font-family: 'Poppins', sans-serif;
-    @apply dark:bg-[#1C0737] bg-[#c59a82];
+    @apply dark:bg-[#1C0737] bg-[#e7ac94];
   }
   .gradient-02 {
     position: absolute;
     width: 550px;
     height: 550px;
-    background: #e05f19 100%;
+    background: #f06236 100%;
     filter: blur(210px);
   }
 
@@ -75,7 +76,7 @@
 
   .slider::before,
   .slider::after{
-    background: linear-gradient(to right, rgb(28,7,55) 0%,
+    background: linear-gradient(to right, #1C0737 0%,
                 rgba(255, 255, 255, 0) 100%);
     content: '';
     height: 100%;
@@ -123,6 +124,10 @@
     right: 0;
     animation: spin 1s infinite;
   }
+
+  .bounce{
+    animation: bounce 1s infinite;
+  }
 }
 
 @keyframes scroll{
@@ -148,5 +153,16 @@
   }
   100%{
     transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }

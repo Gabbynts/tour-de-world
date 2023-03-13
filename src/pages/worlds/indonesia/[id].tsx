@@ -4,6 +4,7 @@ import { getDetailsPhoto } from '@/pages/api/unsplash';
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
 import DetailPhotos from '@/components/photos/DetailPhotos';
+import BgPhotos from '@/components/photos/BgPhotos';
 
 interface QueryError {
   message: string;
@@ -45,7 +46,8 @@ const PhotoPage = () => {
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <main className='min-h-screen layout py-24'>
+        <main className='relative overflow-hidden min-h-screen py-24'>
+          <BgPhotos/>
           <DetailPhotos
             name={data?.user}
             image={data?.urls.regular}

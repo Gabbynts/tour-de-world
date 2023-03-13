@@ -28,8 +28,8 @@ const Text: React.FC<TextProps> = ({
 
       ],
       [
-        colorVariant === 'primary' && ['light:text-[#3b2e27] dark:text-[#FFF6FF]'],
-        colorVariant === 'secondary' && ['light:text-[#815a45] dark:text-[#1C0737]'],
+        colorVariant === 'primary' && ['text-[#010101] dark:text-[#FFF6FF]'],
+        colorVariant === 'secondary' && ['text-[#414342] dark:text-[#1C0737]'],
         colorVariant === 'light' && ['text-white'],
         colorVariant === 'dark' && ['text-gray-600'],
       ], 

@@ -1,6 +1,6 @@
 import Steps from '@/components/Steps';
-import Text from '@/components/Text';
-import { stepsText } from '@/constant/photoWorlds';
+import Text from '@/components/Typography';
+import { stepsText } from '@/constant/photoWorldsDark';
 import { fadeIn, staggerContainer } from '@/utils/motion';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ function About() {
   }, []);
 
   return (
-    <section id='about' className='bg-gradient-to-b from-[#D9D9D9] dark:from-[#5d4f6e] to-[#c59a82] rounded-tl-[700px]'>
+    <section id='about' className='bg-gradient-to-b from-[#D9D9D9] dark:from-[#5d4f6e] to-[#e7ac94] rounded-tl-[700px]'>
       <motion.div
         variants={staggerContainer}
         initial='hidden'
@@ -31,7 +31,7 @@ function About() {
           variants={fadeIn('left', 'tween', 0.2, 1)}
           className='items-center md:pl-48 text-start order-last md:order-first md:block'
         >
-          <Text colorVariant='secondary' className='font-light mb-5 dark:text-[#E6D2FF]'>
+          <Text colorVariant='primary' sizeVariant='h' className='!mb-5'>
             Get Started
           </Text>
           <div className='flex flex-col gap-y-3'>

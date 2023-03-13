@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import Text from '../Typography';
 
 const navLinks = [
   { section: '/#hero', label: 'Home' },
@@ -18,7 +19,7 @@ function Header() {
   };
 
   return (
-    <header className='fixed dark:bg-[#E6D2FF] bg-white w-full z-30'>
+    <header className='fixed dark:bg-[#FCF7FF] bg-[#fdfdfd] w-full z-30'>
       <div className='layout flex justify-between'>
         <div className='flex items-center'>
           <Link href='/'>
@@ -32,14 +33,16 @@ function Header() {
           </Link>
         </div>
         <nav className='hidden md:flex items-center'>
-          <ul className='hidden relative md:flex gap-x-11 text-[20px] font-semibold right-7'>
+          <ul className='hidden relative md:flex gap-x-11 right-7'>
             {navLinks.map(({ section, label }) => (
               <li key={`${section}${label}`}>
                 <a
                   href={section}
-                  className=' hover:text-[#3b2e27] hover:drop-shadow dark:text-[#534137] text-[#DFAE93]'
+                  className='hover:drop-shadow'
                 >
-                  {label}
+                  <Text colorVariant='secondary' sizeVariant='hd'>
+                    {label}
+                  </Text>
                 </a>
               </li>
             ))}

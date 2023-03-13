@@ -17,10 +17,10 @@ interface QueryError {
 export default function Home() {
   const [page, setPage] = useState(1);
   const { isLoading, isError, data, error } = useQuery(
-    ['paris-photos', page],
+    ['river-photos', page],
     () =>
       getPhotos(
-        'paris',
+        'river',
         9,
         page,
         't5WxxhORJ7sAw_rEMQVskzTEdzMq4sLKhHWhk99FqSQ'
@@ -45,7 +45,7 @@ export default function Home() {
     <>
       <Layout>
         <Head>
-          <title>Paris | Tour De World</title>
+          <title>River | Tour De World</title>
           <meta name='TourDeWorld' content='' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
@@ -70,8 +70,8 @@ export default function Home() {
           <PhotoSliderLeft photos={data} />
           <div className='pt-20'>
             <Link
-              href='/forms/paris'
-              className='flex w-[256px] justify-center items-center gap-x-2 bg-[#6E4C99] px-3 py-2 rounded-[10px] hover:bg-[#583c7e]'
+              href='/forms/river'
+              className='flex w-[256px] justify-center items-center gap-x-2 bg-[#AB7AE2] px-3 py-2 rounded-[10px] hover:bg-[#583c7e]'
             >
               Share Your Experiences <GiRoundStar />
             </Link>

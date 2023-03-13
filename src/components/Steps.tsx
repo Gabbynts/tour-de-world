@@ -1,4 +1,5 @@
 import React from 'react'
+import Typography from './Typography'
 
 type Props = {
     number: string,
@@ -7,11 +8,15 @@ type Props = {
 
 function Steps({number, text}: Props) {
   return (
-    <div className='flex text-[30px] items-center gap-x-2'>
+    <div className='flex text-[30px] items-center gap-x-2 text-[#FFF6FF]'>
         <div className='flex items-center justify-center bg-black/10 w-[36px] md:w-[72px] h-[36px] md:h-[60px] rounded-2xl'>
-            <p className='font-bold text-sm md:text-xl'>{number}</p>
+            <Typography sizeVariant='s' colorVariant='primary' className='font-bold'> 
+              {number} 
+            </Typography>
         </div>
-        <p className='flex-1 ml-2 font-light text-[18px] md:text-xl lg:text-3xl'>{text}</p>
+        <Typography sizeVariant='s' colorVariant='primary' className='font-light ml-2 lg:text-3xl'>
+          {text}
+        </Typography>
     </div>
   )
 }

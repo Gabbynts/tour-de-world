@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { fadeIn } from '@/utils/motion';
 import Link from 'next/link';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import Typography from './Typography';
 
 interface Props {
   id: string;
@@ -46,20 +47,20 @@ function PhotoCard({
       {active !== id ? (
         <div className='bg-black/50 absolute w-full h-full rounded-[24px] transition hover:bg-black/20 cursor-pointer '>
           <div className=' lg:-rotate-90 md:pr-20 flex items-center justify-center'>
-            <h2 className='text-[20px] mt-5 ml-5 pr-5 font-semibold text-white '>
-              {title}
-            </h2>
+            <Typography sizeVariant='s' colorVariant='light' className='mt-5 ml-5 pr-5'>{title}</Typography>
           </div>
         </div>
       ) : (
-        <div className='absolute bottom-0 bg-black/50 py-5 w-full h-1/3 lg:h-1/6 flex justify-center items-center'>
-          
-          <Link href={link} className='flex items-center text-center transition-shadow'>
-            <h2 className='text-[24px] sm:text-[40px] font-semibold text-white hover:text-[#ddd5]'>
-              {title}
-            </h2>
+        <div className='absolute bottom-0 bg-black/50 py-5 w-full h-1/3 lg:h-1/6 flex justify-center items-center hover:bg-white/0 transition duration-500'>
+          <Link href={link} className='flex items-center text-center'>
+              <Typography sizeVariant='c' colorVariant='light'>{title}</Typography>
               <div className='cursor-pointer px-3'>
-                <AiOutlineArrowRight className='text-[22px]'/>
+              {/* <Image
+                src='/images/Saly-43.jpg'
+                alt='icon'
+                width={100}
+                height={100}/> */}
+                <AiOutlineArrowRight className='text-[20px] md:text-[30px] bounce text-white'/>
                 {/* <Image
                         src='/headset.svg'
                         alt='Headset'
