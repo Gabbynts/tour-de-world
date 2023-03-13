@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiOutlineLinkedin, AiOutlineInstagram } from 'react-icons/ai'
-import Text from '../Text';
+import Text from '../Typography';
 
 const footerLinks = [
   {href: 'https://github.com/Gabbynts', icons: <AiFillGithub />},
@@ -12,7 +12,7 @@ const footerLinks = [
 
 function Footer() {
   return (
-    <footer className='p-4 rounded-t-2xl shadow md:px-6 md:py-5 dark:bg-[#E6D2FF] bg-white/75'>
+    <footer className='p-4 rounded-t-2xl shadow md:px-6 md:py-5 dark:bg-[#FFF6FF] bg-[#fdfdfd]'>
       <div className='flex layout items-center justify-between'>
         <Link href='/'>
           <Image
@@ -33,7 +33,7 @@ function Footer() {
         </ul>
       </div>
       <hr className='my-6 layout sm:mx-auto border-gray-700 lg:my-8' />
-      <Text colorVariant='dark' className='block layout !text-sm sm:text-center'>
+      <Text colorVariant='secondary' className='block layout !text-sm sm:text-center'>
         Gabriella™. All Rights Reserved.
       </Text>
     </footer>

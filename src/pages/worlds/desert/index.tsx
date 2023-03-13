@@ -72,7 +72,7 @@ export default function Home() {
           <div className='pt-20'>
             <Link
               href='/forms/desert'
-              className='flex w-[256px] justify-center items-center gap-x-2 bg-[#6E4C99] px-3 py-2 rounded-[10px] hover:bg-[#583c7e]'
+              className='flex w-[256px] justify-center items-center gap-x-2 bg-[#f06236] dark:bg-[#6E4C99] px-3 py-2 rounded-[10px] hover:bg-[#583c7e]'
             >
               Share Your Experiences <GiRoundStar />
             </Link>

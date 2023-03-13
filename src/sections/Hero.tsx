@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { staggerContainer } from '@/utils/motion';
 import Earth from '@/container/RenderEarth';
-import Text from '@/components/Text';
+import Text from '@/components/Typography';
 import RenderPlane from '@/container/RenderPlane';
 import RenderGradient from '@/container/GradientHero';
 
@@ -18,12 +18,12 @@ function Hero() {
         <RenderGradient />
         <RenderPlane />
         <Earth />
-        <div className='flex flex-col relative z-10 md:gap-y-8 -mt-20 sm:py-12 md:full py-20 md:px-7 text-center md:top-20 rounded-3xl
+        <div className='flex flex-col relative z-10 md:gap-y-5 -mt-20 sm:py-12 md:full py-20 md:px-7 text-center md:top-20 rounded-3xl
                        md:bg-[#c59a82]/10 md:shadow-[0_15px_15px_15px_rgba(0,0,0,0.3)] transition duration-500 hover:scale-105'>
-          <Text colorVariant='primary' sizeVariant='h' className='drop-shadow-xl z-10 dark:text-[#E6D2FF]'>
+          <Text colorVariant='primary' sizeVariant='h' className='drop-shadow-xl z-10 font-semibold'>
             Tour De World
           </Text>
-          <Text colorVariant='secondary' sizeVariant='b' className='z-10 dark:text-[#FFFFFF]'>
+          <Text colorVariant='primary' sizeVariant='b' className='z-10'>
             Experience the World <br /> One Adventure at a Time
           </Text>
         </div>

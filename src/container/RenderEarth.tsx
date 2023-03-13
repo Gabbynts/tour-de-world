@@ -25,7 +25,7 @@ function RenderEarth() {
             <Image
               src='/images/earthDark.png'
               alt='earth'
-              width={755}
+              width={700}
               height={670}
               className='drop-shadow-2xl transition duration-500 hover:scale-105 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-5/6'
             />
@@ -39,7 +39,7 @@ function RenderEarth() {
             <Image
               src='/images/earthDark.png'
               alt='earth'
-              width={755}
+              width={700}
               height={670}
               className='drop-shadow-2xl transition duration-500 hover:scale-105 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-6/7'
             />
@@ -57,7 +57,7 @@ function RenderEarth() {
         <Image
           src='/images/earth.png'
           alt='earth'
-          width={755}
+          width={700}
           height={670}
           className='drop-shadow-2xl transition duration-500 hover:scale-105 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-5/6'
         />
@@ -71,7 +71,7 @@ function RenderEarth() {
         <Image
           src='/images/earth.png'
           alt='earth'
-          width={755}
+          width={700}
           height={670}
           className='drop-shadow-2xl transition duration-500 hover:scale-105 hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-5/6'
         />

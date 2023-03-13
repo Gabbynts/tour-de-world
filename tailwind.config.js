@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: ['Dancing Script']
+      }
+    },
     // colors: {
     //   primary: {
     //     100: '#DFAE93',
