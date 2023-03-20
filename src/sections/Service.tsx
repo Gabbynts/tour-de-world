@@ -9,7 +9,7 @@ function Service() {
   const [active, setActive] = useState('1');
 
   return (
-    <section id='service' className='layout pt-12 pb-4 min-h-screen mx-auto flex flex-col justify-center'>
+    <section data-testid="service" id='service' className='layout pt-12 pb-4 min-h-screen mx-auto flex flex-col justify-center'>
         <motion.div
         variants={staggerContainer}
         initial="hidden"

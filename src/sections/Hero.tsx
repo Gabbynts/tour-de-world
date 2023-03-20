@@ -7,7 +7,7 @@ import RenderGradient from '@/container/GradientHero';
 
 function Hero() {
   return (
-    <section id='hero ' className='layout'>
+    <section data-testid="hero" id='hero' className='layout'>
       <motion.div
         variants={staggerContainer}
         initial='hidden'

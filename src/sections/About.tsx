@@ -3,7 +3,6 @@ import Text from '@/components/Typography';
 import { stepsText } from '@/constant/photoWorldsDark';
 import { fadeIn, staggerContainer } from '@/utils/motion';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import React, { useEffect } from 'react';
 
 import AOS from 'aos';
@@ -18,7 +17,7 @@ function About() {
   }, []);
 
   return (
-    <section id='about' className='bg-gradient-to-b from-[#D9D9D9] dark:from-[#5d4f6e] to-[#e7ac94] rounded-tl-[700px]'>
+    <section data-testid="about" id='about' className='bg-gradient-to-b from-[#D9D9D9] dark:from-[#5d4f6e] to-[#e7ac94] rounded-tl-[700px]'>
       <motion.div
         variants={staggerContainer}
         initial='hidden'
