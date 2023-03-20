@@ -11,7 +11,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import SuccessModal from '@/components/modal/SuccessModal';
 import Typography from '@/components/Typography';
 
-export default function Desert() {
+export default function Maldives() {
   const methods = useForm({
     mode: 'onTouched',
   });
@@ -43,7 +43,7 @@ export default function Desert() {
     <>
       <Layout>
         <Head>
-          <title>Paris | Tour De World</title>
+          <title>Maldives | Tour De World</title>
           <meta name='TourDeWorld' content='' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />

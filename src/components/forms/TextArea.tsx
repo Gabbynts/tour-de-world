@@ -17,7 +17,7 @@ function TextArea({ label, id, validation }: Props) {
   const error = get(errors, id);
 
   return (
-    <div>
+    <div  data-testid="Label">
       <div>{label}</div>
       <div className='pt-2'>
         <textarea
@@ -28,7 +28,7 @@ function TextArea({ label, id, validation }: Props) {
           className='w-full pl-4 rounded-[22px] bg-[#260D45] text-sm border border-[#d6b6ff] p-4'
         />
                 {error && (
-        <p className='text-error'>
+        <p className='text-error' data-testid="error-message">
           {error?.message?.toString()}
         </p>
       )}

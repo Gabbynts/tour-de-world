@@ -10,13 +10,13 @@ type TextProps = {
   children: ReactNode;
 } & React.HTMLAttributes<HTMLElement>;
 
-const Text: React.FC<TextProps> = ({
+const Typography = ({
   sizeVariant= 'c',
   colorVariant = 'primary',
   children,
   className,
   ...props
-}) => {
+}: TextProps) => {
   return (
     <p className={clsx(        
         [
@@ -41,4 +41,4 @@ const Text: React.FC<TextProps> = ({
   );
 };
 
-export default Text;
+export default Typography;
